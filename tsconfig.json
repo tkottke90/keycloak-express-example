@@ -1,0 +1,30 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "allowJs": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "paths": {
+          "*": [ "node_modules/*" ],
+          "@models/*": [ "src/models/*" ],
+          "@controllers/*": [ "src/controllers/*" ],
+          "@decorators/*": [ "src/decorators/*" ],
+          "@factories/*": [ "src/factories/*" ],
+          "@hooks/*": [ "src/hooks/*" ],
+          "@classes/*": [ "src/classes/*" ],
+          "@services/*": [ "src/services/*" ],
+          "@errors/*": [ "src/errors/*" ],
+          "@package": [ "package.json" ],
+      },
+      "typeRoots": ["./node_modules/@types", "./typings"]
+  },
+  "include": [
+      "src/**/*"
+  ]
+}
